@@ -1,0 +1,24 @@
+<nav>
+  <div class="nav nav-tabs position-relative" role="tablist">
+    <ng-container *ngFor="let tab of tabComps">
+      <button
+        *ngIf="tab.visible"
+        (click)="selectTabById(tab.id)"
+        [ngClass]="{active: tab.selected}"
+        class="nav-link primary-color position-relative"
+        [attr.id]="attr_id"
+        data-bs-toggle="tab"
+        [attr.data-bs-target]="attr_target"
+        type="button"
+        role="tab"
+        [attr.aria-controls]="attr_controls"
+        aria-selected="true">
+        <i class="secondary-color me-2" [class]="tab.icon"></i>
+        {{ tab.title }}
+      </button>
+    </ng-container>
+  </div>
+</nav>
+<div class="tab-content rounded-bottom border border-top-0 p-3">
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,15 @@
+<app-tabs>
+
+  <app-tab id="id1" title="Sekme 1">
+    Sekme 1 içeriği
+  </app-tab>
+
+  <app-tab id="id2" title="Sekme 2" [visible]="false" (init)="sekme2initialized()">
+    Sekme 2 (gizli)
+  </app-tab>
+
+  <app-tab id="id3" title="Sekme 3">
+    Sekme 3 içeriği
+  </app-tab>
+
+</app-tabs>

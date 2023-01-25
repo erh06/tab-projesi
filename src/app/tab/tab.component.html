@@ -1,0 +1,11 @@
+<ng-container *ngIf="visible">
+  <div
+    class="tab-pane fade"
+    *ngIf="selected"
+    [ngClass]="{ 'show active': selected }"
+    [attr.id]="id"
+    role="tabpanel"
+    [attr.aria-labelledby]="attr_labelledby">
+    <ng-content></ng-content>
+  </div>
+</ng-container>
